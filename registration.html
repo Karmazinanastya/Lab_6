@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Реєстрація</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="static/styles/style.css"> -->
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="content-block">
+                    <h2>Реєстрація</h2>
+                    <form id="registration-form">
+                        <div class="form-group">
+                            <label for="email">Електронна пошта:</label>
+                            <input type="email" class="form-control" id="email" placeholder="Введіть електронну пошту">
+                            <div id="email-error" class="error-message"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Пароль:</label>
+                            <input type="password" class="form-control" id="password" placeholder="Введіть пароль">
+                            <div id="password-error" class="error-message"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="last-name">Прізвище:</label>
+                            <input type="text" class="form-control" id="last-name" placeholder="Введіть прізвище">
+                            <div id="last-name-error" class="error-message"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="first-name">Ім'я:</label>
+                            <input type text class="form-control" id="first-name" placeholder="Введіть ім'я">
+                            <div id="first-name-error" class="error-message"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="middle-name">По батькові:</label>
+                            <input type="text" class="form-control" id="middle-name" placeholder="Введіть по батькові">
+                            <div id="middle-name-error" class="error-message"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="birthdate">Дата народження:</label>
+                            <input type="date" class="form-control" id="birthdate">
+                            <div id="birthdate-error" class="error-message"></div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="group">Вибір групи:</label>
+                            <select class="form-control" id="group">
+                                <option value="group1">Група 1</option>
+                                <option value="group2">Група 2</option>
+                                <option value="group3">Група 3</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="file">Завантажити файл:</label>
+                            <input type="file" class="form-control-file" id="file">
+                        </div>
+                        <div class="form-group">
+                            <label for="gender">Стать:</label><br>
+                            <input type="radio" id="male" name="gender" value="Чоловік">Чоловік
+                            <input type="radio" id="female" name="gender" value="Жінка">Жінка
+                            <div id="gender-error" class="error-message"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Номер телефону:</label>
+                            <input type="text" class="form-control" id="phone" placeholder="+38(0__) -___-__-__">
+                            <div id="phone-error" class="error-message"></div>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Зареєструватися</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Електронна пошта</th>
+                <th scope="col">Прізвище</th>
+                <th scope="col">Ім'я</th>
+                <th scope="col">По батькові</th>
+                <th scope="col">Дата народження</th>
+                <th scope="col">Стать</th>
+                <th scope="col">Номер телефону</th>
+            </tr>
+        </thead>
+        <tbody id="table-body">
+        </tbody>
+    </table>
+    <div>
+        <button class="btn btn-danger" id="delete-selected">Видалити вибрані</button>
+        <button class="btn btn-primary" id="duplicate-selected">Дублювати вибрані</button>
+    </div>
+    <script src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.3/jquery.inputmask.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+</body>
+</html>

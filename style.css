@@ -1,0 +1,87 @@
+.animated-element {
+    width: 100px;
+    height: 100px;
+    background-color: #3498db;
+    position: relative;
+    animation: myAnimation 2s infinite; 
+}
+
+@keyframes myAnimation {
+    0% {
+        left: 0;
+    }
+    50% {
+        left: 200px;
+        transform: rotate(180deg);
+    }
+    100% {
+        left: 0;
+    }
+}
+
+
+/* Стилізація заголовку */
+.content-block h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Стилізація контенту */
+body {
+    background-color: #f4f4f4;
+    
+}
+.contact-icons li {
+    display: inline;
+    margin-right: 20px;
+    font-size: 24px;
+}
+.content-block {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+/* Стилізація іконок у футері */
+.container {
+    margin-top: 20px;
+}
+
+
+/* Зміни для адаптації під iPhone 12 */
+@media (max-width: 390px) {
+    .content-block h2 {
+        font-size: 18px; /* Зменшили розмір тексту для мобільних пристроїв */
+    }
+
+    .animated-element {
+        width: 80px; /* Зменшили розмір анімованого елементу для мобільних пристроїв */
+        height: 80px;
+    }
+}
+
+img[src="1.jpg"] {
+    max-width: 100%;
+    height: auto
+}
+
+/* Зміни розміру картинки для адаптації під iPhone 12 */
+@media (max-width: 768px) {
+    .adaptive-image {
+        max-width: 100%;
+    }
+}
+
+
+@media (max-width: 767px) {
+    .animated-element {
+        width: 50px; /* Примітка: зменшено розмір на мобільних пристроях */
+        height: 50px;
+        animation-duration: 1s; /* Зменшили тривалість анімації */
+    }
+}
+
+.hidden {
+    display: none;
+}
